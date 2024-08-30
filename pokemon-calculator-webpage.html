@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Calculator Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #e3350d;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8e8e8 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .calculator-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .calculator-card:hover {
+            transform: translateY(-5px);
+        }
+        .calculator-card h2 {
+            color: #3B4CCA;
+            margin-top: 0;
+        }
+        .calculator-card p {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #FFDE00;
+            color: #3B4CCA;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #B3A125;
+        }
+        footer {
+            background: #3B4CCA;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pokemon Calculator Hub</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="calculator-grid">
+            <div class="calculator-card">
+                <h2>Damage Calculator</h2>
+                <p>Calculate battle damage based on stats, levels, and move power.</p>
+                <a href="#" class="btn">Use Calculator</a>
+            </div>
+            <div class="calculator-card">
+                <h2>IV Calculator</h2>
+                <p>Determine your Pokemon's Individual Values (IVs) or calculate stats.</p>
+                <a href="#" class="btn">Use Calculator</a>
+            </div>
+            <div class="calculator-card">
+                <h2>EV Planner</h2>
+                <p>Plan your Effort Value (EV) training strategy for optimal stats.</p>
+                <a href="#" class="btn">Use Calculator</a>
+            </div>
+            <div class="calculator-card">
+                <h2>Type Matchup Chart</h2>
+                <p>Quick reference for Pokemon type effectiveness in battles.</p>
+                <a href="#" class="btn">View Chart</a>
+            </div>
+            <div class="calculator-card">
+                <h2>Catch Rate Calculator</h2>
+                <p>Calculate the probability of catching a Pokemon in various scenarios.</p>
+                <a href="#" class="btn">Use Calculator</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Visit our main website: <a href="https://www.yourpokemonwebsite.com" style="color: #FFDE00;">www.yourpokemonwebsite.com</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const cards = document.querySelectorAll('.calculator-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseover', () => {
+                    card.style.backgroundColor = '#f0f0f0';
+                });
+                card.addEventListener('mouseout', () => {
+                    card.style.backgroundColor = '#fff';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
